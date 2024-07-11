@@ -1,0 +1,9 @@
+Flask
+Flask-Session
+Flask-Cors
+python-dotenv
+spotipy
+numpy
+aiohttp
+requests
+pandas

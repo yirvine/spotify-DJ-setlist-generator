@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setlister</title>
+    <link rel="stylesheet" href="{{ url_for('main.static_files', filename='styles.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='pics/pat.png') }}" alt="fish" class="small-image">
+    <h1>Spotify Setlister</h1>
+    <a href="{{ url_for('main.login') }}">Get started</a>
+    <!-- <a href="{{ url_for('main.logout') }}">Logout</a> -->
+</body>
+</html>

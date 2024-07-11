@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make your set</title>
+    <!-- <img src="{{ url_for('static', filename='pics/calvin.jpg') }}" alt="fish" class="wide-image"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Make your set...</h1>
+    <div class="container">
+        <form id="dj-set-form" action="{{ url_for('main.generate_dj_set_route') }}" method="post" class="form-container">
+            <div class="form-group">
+                <label for="playlist_id">Select from your saved playlists:</label>
+                <select name="playlist_id" id="playlist_id" class="form-control">
+                    {% for playlist in playlists %}
+                        <option value="{{ playlist.id }}">{{ playlist.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="playlist_url">Or paste a link to a Spotify Playlist:</label>
+                <input type="text" name="playlist_url" id="playlist_url" placeholder="Spotify Playlist URL" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="num_songs">Number of Songs:</label>
+                <input type="number" name="num_songs" id="num_songs" placeholder="Number of songs" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="set_type">Set Style:</label>
+                <select name="set_type" id="set_type" class="form-control">
+                    <option value="1">Classic Set</option>
+                    <option value="2">Wedding Set</option>
+                    <option value="3">Tonal Set</option>
+                    <option value="4">Riser Set</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Generate DJ Set</button>
+        </form>
+
+        <p id="loading-text" style="display:none;">Generating DJ Set...</p>
+        <div id="results" style="display:none;">
+            <h2>Generated DJ Set</h2>
+            <ul id="setlist"></ul>
+            <a id="playlist-link" href="#" target="_blank" class="center-link">View on Spotify</a>
+
+        </div>
+        <a href="{{ url_for('main.logout') }}" class="logout-link">Logout</a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <img src="{{ url_for('static', filename='pics/calvin.jpg') }}" alt="fish" class="wide-image">
+    <title>Make your set</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Make your set...</h1>
+    <div class="container">
+        <form id="dj-set-form" action="{{ url_for('main.generate_dj_set_route') }}" method="post" class="form-container">
+            <div class="form-group">
+                <label for="playlist_id">Playlist:</label>
+                <select name="playlist_id" id="playlist_id" class="form-control">
+                    {% for playlist in playlists %}
+                        <option value="{{ playlist.id }}">{{ playlist.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="playlist_url">Or paste a Spotify Playlist URL:</label>
+                <input type="text" name="playlist_url" id="playlist_url" placeholder="Spotify Playlist URL" class="form-control">
+            </div>
+
+
+            <div class="form-group">
+                <label for="num_songs">Number of Songs:</label>
+                <input type="number" name="num_songs" id="num_songs" placeholder="Number of songs" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="set_type">Set Style:</label>
+                <select name="set_type" id="set_type" class="form-control">
+                    <option value="1">Classic Set</option>
+                    <option value="2">Wedding Set</option>
+                    <option value="3">Tonal Set</option>
+                    <option value="4">Riser Set</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Generate DJ Set</button>
+        </form>
+        <p id="loading-text" style="display:none;">Generating DJ Set...</p>
+        <div id="results" style="display:none;">
+            <h2>Generated DJ Set</h2>
+            <ul id="setlist"></ul>
+            <a id="playlist-link" href="#" target="_blank" class="center-link">View on Spotify</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> -->

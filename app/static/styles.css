@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'lemon_milk';
+    src: url('/static/fonts/lemon_milk/LEMONMILK-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(232, 251, 232);
+    margin: 0;
+    font-family: 'lemon_milk', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 550px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #43b346;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'lemon_milk', Arial, sans-serif;
+    font-size: 18px;
+    width: 350px;
+    margin: 0 auto;    /* Center the fields */
+    margin-top: 5px;
+
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left; /* Ensures the text is left-aligned */
+}
+
+#setlist {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Ensures the text is left-aligned */
+}
+
+#setlist li {
+    margin: 0px 0;
+    font-size: 16px; /* Adjust the font size as needed */
+    font-family: Arial, sans-serif; /* Adjust the font family as needed */
+    text-align: left; /* Ensure the text is left-aligned */
+}
+
+.track-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-name {
+    font-weight: bold;
+}
+
+.track-info {
+    /* font-style: italic; */
+    color: #555;
+}
+
+.dj-set-item {
+    font-size: 16px; /* Adjust the font size as needed */
+    font-family: Arial, sans-serif; /* Adjust the font family as needed */
+    text-align: left; /* Ensure the text is left-aligned */
+    margin: 5px 0; /* Add some margin between items for better readability */
+}
+
+#results h2, #results ul, #results .center-link {
+    align-self: flex-start;
+}
+
+.center-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}
+
+.small-image {
+    width: 500px; /* Adjust the width as needed */
+    height: 350px; /* Maintain aspect ratio */
+}
+
+.wide-image {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Add these styles to restrict the width of the middle form fields */
+#playlist_url,
+#num_songs {
+    max-width: 530px;;  /* Adjust the width as needed */
+    margin: 0 auto;    /* Center the fields */
+    margin-top: 5px; /* Add space above */
+}
+
+/* Add this to styles.css */
+.logout-link {
+    
+    font-size: 14px;  /* Adjust the font size as needed */
+    margin-top: 10px; /* Add space above the link */
+    display: block;   /* Ensure the margin works as expected */
+    text-decoration: none; /* Remove underline */
+    color: #000;  /* Adjust the color as needed */
+    font-family: Arial, sans-serif;
+}
+
+.logout-link:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+}
