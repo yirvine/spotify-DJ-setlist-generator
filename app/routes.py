@@ -47,6 +47,10 @@ def static_files(filename):
 def home():
     return render_template('home.html')
 
+# @bp.route('/track')
+# def track():
+#     return render_template('track.html')    
+
 # @bp.route('/login')
 # def login():
 #     session.clear()  # Clear the session before a new login attempt

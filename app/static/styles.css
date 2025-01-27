@@ -125,6 +125,10 @@ h1 {
     height: 350px; /* Maintain aspect ratio */
 }
 
+.smaller-image {
+    width: 1px; /* Adjust the width as needed */
+    height: 1px; /* Maintain aspect ratio */
+}
 .wide-image {
     width: 400px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
