@@ -6,7 +6,7 @@ import tonal_set
 import riser_set
 import utils
 
-GENERATIONS=1
+GENERATIONS=30
 
 def compatibility_aware_crossover(parent1, parent2, df):
     num_songs = len(parent1)

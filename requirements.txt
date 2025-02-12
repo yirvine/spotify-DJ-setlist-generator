@@ -6,4 +6,3 @@ spotipy
 numpy
 aiohttp
 requests
-pandas

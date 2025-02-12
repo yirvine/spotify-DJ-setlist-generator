@@ -41,7 +41,7 @@ h1 {
 }
 
 .form-control {
-    width: 550px;
+    width: 100%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -50,17 +50,12 @@ h1 {
 
 .btn {
     padding: 10px 15px;
-    background-color: #43b346;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'lemon_milk', Arial, sans-serif;
-    font-size: 18px;
-    width: 350px;
-    margin: 0 auto;    /* Center the fields */
-    margin-top: 5px;
-
 }
 
 .btn:hover {
@@ -118,41 +113,4 @@ h1 {
     font-weight: bold;
     color: blue;
     text-decoration: underline;
-}
-
-.small-image {
-    width: 500px; /* Adjust the width as needed */
-    height: 350px; /* Maintain aspect ratio */
-}
-
-.smaller-image {
-    width: 1px; /* Adjust the width as needed */
-    height: 1px; /* Maintain aspect ratio */
-}
-.wide-image {
-    width: 400px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Add these styles to restrict the width of the middle form fields */
-#playlist_url,
-#num_songs {
-    max-width: 530px;;  /* Adjust the width as needed */
-    margin: 0 auto;    /* Center the fields */
-    margin-top: 5px; /* Add space above */
-}
-
-/* Add this to styles.css */
-.logout-link {
-    
-    font-size: 14px;  /* Adjust the font size as needed */
-    margin-top: 10px; /* Add space above the link */
-    display: block;   /* Ensure the margin works as expected */
-    text-decoration: none; /* Remove underline */
-    color: #000;  /* Adjust the color as needed */
-    font-family: Arial, sans-serif;
-}
-
-.logout-link:hover {
-    text-decoration: underline; /* Add underline on hover if desired */
 }
