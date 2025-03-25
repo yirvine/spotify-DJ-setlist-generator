@@ -5,9 +5,13 @@ The **DJ Set Generator Web App** is a web application that allows users to creat
 
 The app is hosted on **AWS EC2**, uses **Flask** for the backend, and **Spotipy** for Spotify API integration.
 
+## Screenshots
+![Home Screen](./screenshots/home-screen.png)
+![Set Generator](./screenshots/set-generator.png)
+
 ## Features
 - 🎧 **Spotify Login**: Users authenticate via Spotify OAuth.
-- 📜 **Playlist Selection**: Fetches and displays the user’s Spotify playlists.
+- 📜 **Playlist Selection**: Fetches and displays the user's Spotify playlists.
 - 🔍 **Custom Set Generation**: Generates a DJ set based on playlist tracks.
 - 🎼 **Set Optimization**: ML-based optimization for transitions, energy, and key compatibility.
 - 🎵 **Playlist Creation**: Automatically creates the set as a new playlist in Spotify.
