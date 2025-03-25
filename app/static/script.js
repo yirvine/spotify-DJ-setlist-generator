@@ -23,21 +23,37 @@ document.getElementById('dj-set-form').addEventListener('submit', async function
         const setlist = document.getElementById('setlist');
         setlist.innerHTML = '';
         
-        // Use an ordered list <ol> instead of <ul>
+        // Create a styled ordered list for the setlist
         const ol = document.createElement('ol');
+        
         data.set_list.forEach((track, index) => {
             const li = document.createElement('li');
             const firstArtist = track.artist.split(',')[0].trim();  // Extract the first artist
-            li.innerHTML = `<strong>${track.name} by ${firstArtist}</strong>, ${track.key} (${track.camelot_key}), ${Math.round(track.tempo)} BPM`;
+            
+            // Create a more structured HTML for each track
+            li.innerHTML = `
+                <div class="track-item">
+                    <div class="track-main">
+                        <strong class="track-name">${track.name}</strong> 
+                        <span class="track-artist">by ${firstArtist}</span>
+                    </div>
+                    <div class="track-details">
+                        <span class="track-key">${track.key} (${track.camelot_key})</span>
+                        <span class="track-bpm">${Math.round(track.tempo)} BPM</span>
+                    </div>
+                </div>
+            `;
+            
             ol.appendChild(li);
         });
+        
         setlist.appendChild(ol);
         
-
         const playlistLink = document.getElementById('playlist-link');
         playlistLink.href = data.new_playlist_url;
         
     } else {
         document.getElementById('loading-text').textContent = 'Error generating DJ set. Please try again.';
+        document.getElementById('loading-text').style.color = '#e74c3c';
     }
 });
