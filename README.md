@@ -8,11 +8,11 @@ The app is hosted on **AWS EC2**, uses **Flask** for the backend, and **Spotipy*
 ## ⚡ Demo in Action
 ![Demo of DJ Set Generator](./screenshots/demo-small.gif)
 
-> **What's happening here?** The demo showcases two different playlist generations:
-> 1. A modern tech house set optimized for smooth BPM and harmonic mixing
-> 2. A nostalgic "Riser Set" transforming a larger playlist into a curated 12-track sequence
+> **What's happening here?** The demo showcases two different algorithmic approaches to playlist generation:
+> 1. A **Classic Set** optimizing for tonal compatibility and consistent high energy, perfect for tech house and similar genres where maintaining the groove is crucial
+> 2. A **Riser Set** that intelligently builds energy throughout the sequence, using Spotify's audio features (energy, danceability) to create a gradually intensifying experience, while maintaining a reasonable level of tonal compatibility
 >
-> Each generation analyzes track compatibility, musical keys, and energy progression to create the perfect flow. 🎛️
+> Both algorithms analyze track compatibility and extract audio features via Spotify's Web API, but each serves a distinct purpose in the art of setlist curation. 🎛️
 
 ## Screenshots
 ![Home Screen](./screenshots/home-screen.png)
