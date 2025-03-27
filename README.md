@@ -1,9 +1,14 @@
 # DJ Set Generator Web App 🎵
 
 ## Overview
-The **DJ Set Generator Web App** is a web application that allows users to create optimized DJ setlists from their Spotify playlists. Users log in via Spotify, select a playlist, and specify the number of tracks and style of the set. The app processes the playlist using machine learning-based optimization and generates an ideal DJ set.
+The **DJ Set Generator Web App** transforms Spotify playlists into professionally sequenced DJ sets using machine learning optimization. Users can either select from their saved Spotify playlists or input any public playlist URL, providing a flexible pool of tracks to work with. The app then analyzes this track pool, extracting musical features via Spotify's API, and constructs an optimized setlist of your specified length.
 
-The app is hosted on **AWS EC2**, uses **Flask** for the backend, and **Spotipy** for Spotify API integration.
+Each generated set is crafted using algorithms that consider key compatibility, energy progression, and beat matching—taking the heavy lifting out of DJ set preparation. The result? A perfectly curated setlist saved to your Spotify account. 
+
+The app is built with **Flask** (Python) for the backend, integrates with **Spotify's Web API** via Spotipy, and is deployed on **AWS EC2**.
+
+> ⚠️ **Note**: As of December 2024, Spotify has unfortunately discontinued 
+their Web API for non-production apps. The demo below showcases the app in action during its operational period.
 
 ## ⚡ Demo in Action
 ![Demo of DJ Set Generator](./screenshots/demo-small.gif)
@@ -41,10 +46,9 @@ The app is hosted on **AWS EC2**, uses **Flask** for the backend, and **Spotipy*
 
 
 ```bash
-git clone https://github.com/yourusername/dj-set-generator.git
-cd dj-set-generator
+git clone https://github.com/yirvine/spotify-DJ-setlist-generator.git
+cd spotify-DJ-setlist-generator
 ```
-
 ### 2️⃣ Set up a virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
@@ -96,7 +100,7 @@ Playlists Not Showing? → Ensure correct Spotify OAuth Scopes are used.
 ## Future Improvements
 🎭 Mobile UI Optimization
 🤖 AI-based Playlist Mixing
-🚀 Docker Deployment
+�� Docker Deployment
 🔄 Better Caching for Token Handling
 
 ## License
