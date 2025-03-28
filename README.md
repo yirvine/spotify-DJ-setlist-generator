@@ -97,12 +97,6 @@ Login Loop? → Clear cache & delete .cache-* files.
 Invalid Redirect URI? → Ensure the URI in Spotify Developer Dashboard matches http://127.0.0.1:5000/callback.
 Playlists Not Showing? → Ensure correct Spotify OAuth Scopes are used.
 
-## Future Improvements
-🎭 Mobile UI Optimization
-🤖 AI-based Playlist Mixing
-�� Docker Deployment
-🔄 Better Caching for Token Handling
-
 ## License
 MIT License. Free to use & modify.
 
